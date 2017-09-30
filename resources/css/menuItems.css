@@ -1,0 +1,116 @@
+.menuWrapperItem .backBtn {
+	position: absolute;
+	top: 0;
+	font-size: 2.5rem
+}
+
+.itemDetails > div {
+/*	padding: 1rem;*/
+	font-size: 1.1rem;
+	text-align: left;
+}
+
+.itemDetails h1 {
+	margin: 0;
+	margin-bottom: 1rem;
+	padding-top: 0;
+
+	font-family:  "Raleway", "sans-serif";
+  	font-size: 2.5rem;
+  	font-weight:900;
+  	text-align: left;
+/*  	text-transform: uppercase;*/
+/*  	letter-spacing: 2px;*/
+}
+
+.itemDetails h2 {
+	margin: 0;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: left;
+}
+
+.myself .personalDetails {
+	float: left;
+	padding-left: 1rem;
+	text-align: left;
+}
+
+.myself .image {
+	float: left;
+	border-radius: 1rem;
+	width: 15rem;
+	height: 15rem;
+	background-image: url('../img/myself.jpg');
+	background-size: 15rem;
+	background-repeat: no-repeat;
+	background-position: 50% 13%;
+}
+
+.myself .client {
+	display: inline-block;
+}
+
+.myself .client:after {
+	content: '•';
+	display: inline-block;
+   width: 1rem;
+   text-align: center;
+}
+
+.myself .client:last-of-type:after {
+	content: '';
+	display: inline-block;
+   	width: 0;
+}
+
+.myself .language {
+	margin: 1rem auto;
+/*	margin: auto;
+	width: 30rem;
+	text-align: left;*/
+}
+
+.contact {
+	float: left;
+	clear: both;
+	vertical-align: middle;
+	line-height: 3rem;
+}
+
+.social {
+	margin-top: 1rem;
+	line-height: 3rem;
+	display: inline-block;
+	vertical-align: middle;
+	width: 3rem;
+	height: 3rem;
+}
+
+.facebook{
+	margin-left: 4rem;
+	background-image: url('../img/facebook.png');
+	background-size: 3rem;
+	background-repeat: no-repeat;
+}
+
+.linkedin{
+	margin-left: 1rem;
+	background-image: url('../img/linkedin.png');
+	background-size: 3rem;
+	background-repeat: no-repeat;
+}
+
+.email {
+	display: inline-block;
+	margin-top: 1rem;
+	margin-left: 4.5rem;
+	line-height: 3rem;
+	vertical-align: middle;
+}
+
+.itemDetails .description {
+	margin-bottom: 1rem;
+}

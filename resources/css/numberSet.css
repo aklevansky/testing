@@ -1,0 +1,274 @@
+.displayResult {
+	position: absolute;
+	top: 14.5vw;
+	bottom: 0;
+	left: 30vw;
+	z-index: 10;
+	overflow-x: auto;
+	margin-top: 1rem;
+	padding: 1rem;
+	padding-top: 0;
+/*	border-right: 1px solid black;*/
+/*	min-height: 100vhs;*/
+	width: 66.285vw;
+  	color: black;
+	background-color: white;
+}
+
+.js-session {
+	margin-bottom: 1rem;
+/*	padding: 1rem;*/
+    border: 1px solid black;
+    border-radius: 1rem;
+	max-height: 0;	
+    overflow-x: hidden;
+	opacity: 1;
+}
+
+.js-session.fade {
+ /*   -webkit-animation: fade 15s;
+    animation: fade 15s;
+*/    opacity: 0;
+ 	-webkit-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
+    transition: opacity 1s linear;     
+}
+
+ .js-session.slideDown {
+    -webkit-animation: slideDown 15s;
+    animation: slideDown 15s;
+    max-height: 10000px;
+
+ }
+
+
+
+@-webkit-keyframes fade {
+    from {opacity: 1}
+    to {opacity: 0}
+}@keyframes fade {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+@-webkit-keyframes slideDown {
+    from {max-height: 0}
+    to {max-height: 10000px}
+}@keyframes slideDown {
+    from {max-height: 0}
+    to {max-height: 10000px}
+}
+
+
+@-webkit-keyframes slideUp {
+    from {max-height: 10000px}
+    to {max-height: 0}
+}@keyframes slideUp {
+    from {max-height: 10000px}
+    to {max-height: 0}
+}
+
+.js-session h2 {
+	margin: 0;
+	margin-right: 1rem;
+/*	font-size: 1.5rem;*/
+}
+
+.js-session button {
+	font-size: 1.5rem;
+	margin-right: 0.5rem;
+	color: black;
+	cursor: pointer;
+	opacity: 1;
+}
+
+.js-session button:hover {
+	color: red;
+}
+
+/* Playing state */
+
+.js-playing button, .js-paused button {
+	cursor: not-allowed;
+	opacity: 0.3;
+	color: black;
+}
+
+.js-playing button:hover, .js-paused button:hover {
+	cursor: not-allowed;
+	opacity: 0.3;
+	color: black;
+}
+
+
+/* Playing state - current session*/
+
+.js-session.js-currentSession button {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.js-session.js-currentSession button:hover {
+	color: red;
+	cursor: pointer;
+	opacity: 1;
+}
+
+/* Paused state */
+.js-paused .js-currentSession button.js-pauseBtn {
+	display: none;
+}
+
+.js-paused .js-currentSession button.js-playBtn {
+	display: inline-block;
+}
+
+
+.js-session button.js-pauseBtn {
+	display: none;
+}
+
+.js-session button.js-playBtn {
+	display: inline-block;
+}
+
+.js-session button.wrapBtn {
+	color: black;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.js-session button.closeBtn {
+	color: black;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.js-currentSession button.js-pauseBtn {
+	display: inline-block;
+}
+
+.js-currentSession button.js-playBtn {
+	display: none;
+}
+
+
+.heading {
+	padding-top: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	line-height: 1.5rem;
+	vertical-align:middle;
+}
+
+/*.controlPlay {
+	line-height: 1.5rem;
+	vertical-align:middle;
+}*/
+
+.heading h2 {
+	display: inline-block;
+	font-size: 1.1rem;
+	vertical-align:middle;
+}
+
+.heading .controlPlay {
+	display: inline-block;
+	line-height: 1.5;
+	vertical-align:middle;
+}
+
+.heading button {
+	display: inline-block;
+	font-size: 1.1rem;
+	height: 1.1rem;
+}
+
+.heading button.js-hidden {
+	display: none;
+}
+
+.controlPlay input {
+	display: inline-block;
+	margin-left: 1rem;
+	width: 5rem;
+	vertical-align:middle;
+}
+
+.controlWindow {
+	float: right;
+}
+
+.js-numberSet {
+	margin-top: 1rem;
+	padding-top: 1rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	border-top: 1px solid black;
+	font-size: 1.3rem;
+/*	max-height: 10000px;
+
+	-webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;     */
+}
+
+.numberSetWrapper {
+
+	overflow-y: hidden;
+	max-height: 200rem;
+	padding-bottom: 1rem;
+	-webkit-transition: max-height 1s  ease-in-out;
+    -moz-transition: max-height 1s  ease-in-out;
+    -o-transition: max-height 1s  ease-in-out;
+    transition: max-height 1s  ease-in-out;     
+}
+
+.js-currentSpan {
+	color: red;
+}
+
+.js-currentSession {
+	border: 1px solid red;
+}
+
+.js-currentSession h2 {
+	color: red;
+}
+
+.js-activeSpan {
+	color: red;
+}
+
+.js-numberSet span {
+	float: left;
+	margin-right: 0.5rem;
+}
+
+.js-numberSet span::after { 
+    content: ";";
+}
+
+.js-numberSet span:last-of-type::after { 
+    content: "";
+}
+
+.js-wrapped .numberSetWrapper {
+/*	padding: 0;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	border: none;*/
+/*	opacity: 0;*/
+	max-height: 0;
+	-webkit-transition: all 1s cubic-bezier(0, 1, 0, 1);;
+    -moz-transition: all 1s cubic-bezier(0, 1, 0, 1);;
+    -o-transition: all 1s cubic-bezier(0, 1, 0, 1);;
+    transition: all 1s cubic-bezier(0, 1, 0, 1);;     
+}
+
+.rateCaption {
+	display: inline-block;
+	margin-left: 2rem;
+}
